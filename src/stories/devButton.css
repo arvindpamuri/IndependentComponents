@@ -1,0 +1,30 @@
+.dev-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 11px 20px;
+}
+
+.default {
+    background: #E0E0E0;
+}
+
+.outline {
+    background: none;
+    color: #3D5AFE;
+    border: 1px solid #3D5AFE;
+}
+
+.text {
+    background: none;
+    border: none;
+}
+
+.boxShadow {
+    box-shadow: 1px 1px 1px 1px #888888;
+}
