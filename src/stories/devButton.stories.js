@@ -11,31 +11,58 @@ const Template = (args) => <DevButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    title: 'Default',
     variant: 'default'    
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
-    title: 'Outline',
     variant: 'outline'
 
 }
 
 export const Text = Template.bind({});
 Text.args = {
-    title: 'Text',
     variant: 'text',
     boxShadowDisabled: true
 }
 
 export const BoxShadowEnabled = Template.bind({});
 BoxShadowEnabled.args = {
-    enableBoxShadow: true
+    boxShadow: true
 }
 
 export const BoxShadowDisabled = Template.bind({});
 BoxShadowDisabled.args = {
-    enableBoxShadow: false
+    boxShadow: false
 }
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+    disabled: true
+}
+
+
+export const LeftIcon = Template.bind({});
+LeftIcon.args = {
+    iconPosition: 'left'
+}
+
+export const RightIcon = Template.bind({});
+RightIcon.args = {
+    iconPosition: 'right'
+}
+
+export const Primary = Template.bind({});
+Primary.args = {
+    color: 'primary'
+}
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+    color: 'secondary'
+}
+
+export const Danger = Template.bind({});
+Danger.args = {
+    color: 'danger'
+}

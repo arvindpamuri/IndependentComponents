@@ -1,21 +1,25 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import './devButton.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-export const DevButton = ({variant, title, enableBoxShadow, ...props}) => {
-    let str = 'dev-button';
-    str += ' ' + variant
-    console.log(enableBoxShadow)
-    if(enableBoxShadow)
-        str += ' boxShadow'
-    console.log(str)
+export const DevButton = ({variant, title, boxShadow, iconPosition, color, ...props}) => {
+
     return (
+
         <button 
         type="button"
-        className={str}
+        className={`dev-button 
+            ${variant} 
+            ${boxShadow ? 'boxShadow' : ''}
+            ${color}          
+            `}
         {...props}
         >
-            {title}
+            {(iconPosition === 'left') ? <FontAwesomeIcon icon={faShoppingCart}/> : ""} 
+            <span>{title}</span>
+            {(iconPosition === 'right') ? <FontAwesomeIcon icon={faShoppingCart}/> : ""} 
         </button>
     );
 };
@@ -26,13 +30,21 @@ DevButton.propTypes = {
 
     title: propTypes.string,
 
-    boxShadowDisabled: propTypes.bool
+    boxShadow: propTypes.bool,
+
+    disabled: propTypes.bool,
+
+    iconPosition: propTypes.oneOf(['left', 'right']),
+
+    color: propTypes.oneOf(['primary', 'secondary','danger'])
 
 };
 
 
 DevButton.defaultProps = {
     title: 'Button',
-    boxShadowDisabled: false,
-    variant: 'default'
+    boxShadow: false,
+    variant: 'default',
+    leftIcon: false,
+    rightIcon: false    
 }
