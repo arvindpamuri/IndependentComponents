@@ -4,7 +4,7 @@ import './devButton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-export const DevButton = ({variant, title, boxShadow, iconPosition, color, ...props}) => {
+export const DevButton = ({variant, title, boxShadow, iconPosition, color, size, ...props}) => {
 
     return (
 
@@ -13,7 +13,8 @@ export const DevButton = ({variant, title, boxShadow, iconPosition, color, ...pr
         className={`dev-button 
             ${variant} 
             ${boxShadow ? 'boxShadow' : ''}
-            ${color}          
+            ${color}
+            ${size}          
             `}
         {...props}
         >
@@ -36,7 +37,9 @@ DevButton.propTypes = {
 
     iconPosition: propTypes.oneOf(['left', 'right']),
 
-    color: propTypes.oneOf(['primary', 'secondary','danger'])
+    color: propTypes.oneOf(['primary', 'secondary','danger']),
+
+    size: propTypes.oneOf(['sm', 'md', 'lg' ])
 
 };
 

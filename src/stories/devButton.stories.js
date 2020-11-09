@@ -66,3 +66,22 @@ export const Danger = Template.bind({});
 Danger.args = {
     color: 'danger'
 }
+
+export const Small = Template.bind({});
+Small.args = {
+    title: 'small',
+    size: 'sm'
+}
+
+export const Medium = Template.bind({});
+Medium.args = {
+    title: 'medium',
+    size: 'md'
+}
+
+export const Large = Template.bind({});
+Large.args = {
+    title: 'large',
+    size: 'lg'
+}
+
